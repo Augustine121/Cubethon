@@ -34,5 +34,9 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
             checkRight = false;
         }
+        if (rb.position.y < -1f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 }

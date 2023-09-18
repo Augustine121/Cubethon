@@ -38,5 +38,10 @@ namespace Chapter.Command
                     invoker.ExecuteCommand(buttonSpace);
             }
         }
+        public void StartReplay()
+        {
+            movementController.ResetPosition();
+            invoker.Replay();
+        }
     }
 }

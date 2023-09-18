@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 8239963917323091858}
   - component: {fileID: 332903772246797186}
   - component: {fileID: 3606807338319263062}
-  - component: {fileID: 7824045401219175869}
-  - component: {fileID: 7188742217969431518}
+  - component: {fileID: 8981808085077046913}
+  - component: {fileID: 4028518294396855139}
+  - component: {fileID: 3623733293288509172}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -135,26 +136,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &7824045401219175869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4071150261121816464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d260f53decbdbd24eadd9764204675eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 3606807338319263062}
-  forwardForce: 8000
-  sidewaysForce: 120
-  upForce: 500
-  checkLeft: 0
-  checkRight: 0
-  checkUp: 0
---- !u!114 &7188742217969431518
+--- !u!114 &8981808085077046913
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,4 +148,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 582e0b1cc6c42064686e38139bb5b530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 7824045401219175869}
+  movement: {fileID: 3623733293288509172}
+--- !u!114 &4028518294396855139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4071150261121816464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d260f53decbdbd24eadd9764204675eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3623733293288509172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4071150261121816464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd97bdc161d98147b4edd21c53a191e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 3606807338319263062}
+  forwardForce: 8000
+  sidewaysForce: 4000
+  upForce: 4000

@@ -1,19 +1,14 @@
 using Chapter.Command;
 using UnityEngine;
 
-namespace Chapter.Command
+public class PlayerCollision : MonoBehaviour
 {
-    public class PlayerCollision : MonoBehaviour
+    void OnCollisionEnter(Collision collisionInfo)
     {
-        public MovementController movement;
-
-        void OnCollisionEnter(Collision collisionInfo)
+        if (collisionInfo.collider.tag == "Obstacle")
         {
-            if (collisionInfo.collider.tag == "Obstacle")
-            {
-                movement.enabled = false;
-                FindObjectOfType<GameManager>().EndGame();
-            }
+            Debug.Log("Collision Alert!");
+            FindObjectOfType<GameManager>().StartReplay();
         }
     }
 }

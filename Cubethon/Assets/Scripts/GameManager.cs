@@ -35,7 +35,8 @@ public class GameManager : MonoBehaviour
     }
     void RestartReplay()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        FindObjectOfType<PlayerController>().ResestPosition();
         FindObjectOfType<Chapter.Command.Invoker>().Replay();
     }
 }

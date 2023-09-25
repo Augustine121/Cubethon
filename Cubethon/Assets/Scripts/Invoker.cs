@@ -14,6 +14,7 @@ namespace Chapter.Command
         private SortedList<float, Command> recordedCommands;
         void Start()
         {
+            isReplaying = false;
             recordedCommands = new SortedList<float, Command>();
         }
         public void ExecuteCommand(Command command)
@@ -35,13 +36,19 @@ namespace Chapter.Command
         }
         public void Replay()
         {
+            Debug.Log("Invoker Replay Called");
             replayTime = 0.0f;
             isReplaying = true;
+            isRecording = false;
             if (recordedCommands.Count <= 0)
             {
                 Debug.LogError("No commands to replay!");
             }
             recordedCommands.Reverse();
+        }
+        public bool getReplay()
+        {
+            return isReplaying;
         }
         void FixedUpdate()
         {

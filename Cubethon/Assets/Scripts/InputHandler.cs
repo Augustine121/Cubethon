@@ -1,4 +1,6 @@
+#if UNITY_EDITOR
 using UnityEditor.Timeline.Actions;
+#endif
 using UnityEngine;
 
 namespace Chapter.Command
@@ -27,6 +29,7 @@ namespace Chapter.Command
 
         void Update()
         {
+            isReplaying = invoker.getReplay();
             if (!isReplaying && isRecording)
             {
                 if (Input.GetKey("a"))

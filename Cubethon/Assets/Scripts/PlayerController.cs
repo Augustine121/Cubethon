@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Chapter.Command.Subject
 {
     public Rigidbody rb;
     public float forwardForce;
@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private bool right;
     private Vector3 originalPosition;
     private Quaternion originalRotation;
+    public float distance;
     void Start()
     {
         originalPosition = rb.transform.position;
@@ -37,7 +38,9 @@ public class PlayerController : MonoBehaviour
             right = false;
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
         }
-
+        distance = rb.transform.position.z - originalPosition.z;
+        NotifyObservers();
+        
     }
     public void Jump()
     {
